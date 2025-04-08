@@ -4,12 +4,13 @@ theme: default
 class: lead
 ---
 
-# 🧭 Sprint Ceremonies in Small Companies
+# 🧭 Key Sprint Elements for Small Companies
 
-| Ceremony             | Purpose                                   | Keep?        | Notes for Small Teams                            |
-|---------------------|--------------------------------------------|--------------|--------------------------------------------------|
-| **Sprint Planning**  | Define what to deliver this sprint         | ✅ Keep       | Keep it lightweight; 30–60 mins is usually enough |
-| **Daily Standup**    | Sync progress and blockers                 | ✅ Keep (⚙️)  | Can be async in chat or done in 10 mins          |
-| **Sprint Review**    | Demo and get feedback on what was built    | 🟡 Optional   | Useful if there's a stakeholder or internal client |
-| **Retrospective**    | Reflect on what worked & what didn’t       | ✅ Keep       | Even 15 mins every 2 sprints is valuable         |
-| **Backlog Grooming** | Prep and clarify future work               | 🟡 Optional   | Can be informal, combined with planning          |
+| Item                  | Purpose                                                | Adaptation in Small Company           |
+|-----------------------|--------------------------------------------------------|---------------------------------------|
+| **Sprint Length**     | Timebox for focus and delivery rhythm                  | ✅ *Maybe* – Start with 1-week sprints to move fast early on; switch to 2 weeks once things stabilize |
+| **Sprint Planning**   | Decide what to build and align expectations            | ✅ *Maybe* – Can be combined with retro; focus more on setting clear sprint goals |
+| **Daily Standup**     | Sync progress and surface blockers                     | ✅ *Yes* – Keep it async or under 10 minutes in person |
+| **Sprint Review**     | Demo completed work and gather feedback                | 🟡 *Can Skip* – Good for team morale and useful when stakeholders are involved |
+| **Retrospective**     | Reflect on process, surface improvements, monitor velocity | 🚫 *No Change* – Even a short retro every 1–2 sprints is valuable |
+| **Backlog Grooming**  | Prepare upcoming work, clarify tasks, estimate effort  | 🟡 *Can Skip* – Often merged with sprint planning in small teams |
