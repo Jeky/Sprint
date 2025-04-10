@@ -31,12 +31,13 @@ class: lead
 
 ---
 
-# 🧠 How Do We Estimate the Task?
+# 🧠 How Do We Manage the Timeline to Roll Out the Feature?
 
-1. 🪜 How should we break down a task?
-2. 📏 How should we estimate it?
-3. 🔧 How should we code it? (Implementation lifecycle)
-4. 🌀 How do we avoid mid-sprint randomness?
+1. 🪜 Breakdown the task for easier estimation  
+2. 🔍 Spike tasks to deal with unknowns  
+3. 🎯 Use correct pointing system  
+4. 🔧 Correct coding strategy  
+5. 🌀 How do we avoid mid-sprint randomness?
 
 ---
 
@@ -51,20 +52,6 @@ class: lead
 - 🔄 Split work by delivery steps, not tech layers  
 - 🔍 Use spike tasks for investigation or unclear work  
 - 🧼 Include supporting tasks (tests, docs, cleanup)
-
----
-
-# 📏 How Should We Estimate a Task?
-
-**Goal:** Estimate with enough accuracy to plan, not to promise.
-
-### 🔹 Good Practices
-
-- 🧩 Break down before estimating  
-- 🔄 Compare with similar past work  
-- 🤝 Estimate together, not solo  
-- ❓ Call out unknowns or risks  
-- 📊 Use points, hours, or sizes — just be consistent
 
 ---
 
@@ -126,7 +113,7 @@ Story points are often **too abstract** for small teams, especially without cons
 
 ### 🔹 Strategies That Help
 
-- 📦 Keep the sprint backlog tight — only what's well-defined and ready
-- 📣 Communicate — speak up early when something goes off track
-- 🚫 Avoid bundling tech debt into feature work unless planned
+- 📦 Keep the sprint backlog tight — only what's well-defined and ready  
+- 📣 Communicate — speak up early when something goes off track  
+- 🚫 Avoid bundling tech debt into feature work unless planned  
 - 🧯 Escalate scope creep early — replan if needed
