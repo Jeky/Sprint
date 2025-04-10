@@ -4,103 +4,129 @@ theme: default
 class: lead
 ---
 
-# 🧭 Key Sprint Elements for Small Companies
+# 🧭 Product Context
 
-| Item                  | Purpose                                                | Adaptation in Small Company           |
-|-----------------------|--------------------------------------------------------|---------------------------------------|
-| **Sprint Length**     | Timebox for focus and delivery rhythm                  | ✅ *Maybe* – Start with 1-week sprints to move fast early on; switch to 2 weeks once things stabilize |
-| **Sprint Planning**   | Decide what to build and align expectations            | ✅ *Maybe* – Can be combined with retro; focus more on setting clear sprint goals |
-| **Daily Standup**     | Sync progress and surface blockers                     | ✅ *Yes* – Keep it async or under 10 minutes in person |
-| **Sprint Review**     | Demo completed work and gather feedback                | 🟡 *Can Skip* – Good for team morale and useful when stakeholders are involved |
-| **Retrospective**     | Reflect on process, surface improvements, monitor velocity | 🚫 *No Change* – Even a short retro every 1–2 sprints is valuable |
-| **Backlog Grooming**  | Prepare upcoming work, clarify tasks, estimate effort  | 🟡 *Can Skip* – Can be done offline by dev |
+- SaaS product live for 1 year
+- Customers request visibility into **team usage**
+- Need a **dashboard for org admins**
 
----
-
-# ❗ Under-Estimating Tasks
-
-**Problem:**  
-Developers think the task is simple, but hidden complexity or edge cases make it take much longer.
-
-**Why It Happens:**  
-- Lack of clarity or detail  
-- Overconfidence from past similar tasks  
-- Missing consideration for testing, integration, error handling
-
-**Suggestions:**  
-✅ Ask: “What could go wrong?”  
-✅ Add buffer *only* for known risk areas  
-✅ Break task into smaller subtasks  
-✅ Use past tickets as size reference
+**Requested metrics:**
+- Active users over time
+- Most used features
+- Last login per user
+- Org-wide usage summary
 
 ---
 
-# ⚠️ Over-Estimating Tasks
+# 🧱 Current Codebase Reality
 
-**Problem:**  
-Developers add a large buffer due to fear of missing deadlines or being judged.
-
-**Why It Happens:**  
-- Low confidence in requirements  
-- Fear of being blamed for delays  
-- Estimating solo without peer support
-
-**Suggestions:**  
-✅ Normalize that estimates are not commitments  
-✅ Estimate as a team or pair (sanity check)  
-✅ Encourage iteration: “Let’s aim for X, but adjust if needed”  
-✅ Build trust that re-scoping is OK
+- Backend logs activity in `jsonb`, semi-structured
+- Internal analytics exist but not reusable
+- Frontend has an admin panel, but it’s underdeveloped
+- Mixed code quality:
+  - User/auth logic is clean
+  - Analytics code is messy and scattered
+  - Minimal test coverage in this area
+  - No design system for frontend
 
 ---
 
-# 🔍 Hidden Work / Missing Scope
+# 🧠 How Do We Estimate the Task?
 
-**Problem:**  
-A task looks simple but includes unaccounted work like infra, setup, or integration.
-
-**Why It Happens:**  
-- Vague task definitions  
-- No clear checklist or “definition of done”  
-- No one catches the gaps during planning
-
-**Suggestions:**  
-✅ Define done before estimating  
-✅ Ask: “What’s needed before/after this task?”  
-✅ Add a buffer if dependent on others (e.g. API readiness)  
-✅ Use spike tasks to explore unknowns
+1. 🪜 How should we break down a task?
+2. 📏 How should we estimate it?
+3. 🔧 How should we code it? (Implementation lifecycle)
+4. 🌀 How do we avoid mid-sprint randomness?
 
 ---
 
-# 🧱 Task is Too Big or Vague
+# 🪜 How Should We Break Down a Task?
 
-**Problem:**  
-Hard to estimate large or fuzzy tasks like "build dashboard" or "improve UX".
+**Goal:** Make tasks small, focused, and estimate-friendly.
 
-**Why It Happens:**  
-- Task not broken down  
-- No measurable outcome defined  
-- Ambiguous or exploratory work
+### 🔹 Good Practices
 
-**Suggestions:**  
-✅ Break down by deliverable or flow  
-✅ Include measurable goals or acceptance criteria  
-✅ Add a design or spike task if details are unclear  
-✅ Ensure it can be completed in 1–2 days max
+- ❌ Avoid vague tasks — be specific and outcome-focused  
+- ✅ Define “done” for every task  
+- 🔄 Split work by delivery steps, not tech layers  
+- 🔍 Use spike tasks for investigation or unclear work  
+- 🧼 Include supporting tasks (tests, docs, cleanup)
 
 ---
 
-# 🧍 Estimating Alone
+# 📏 How Should We Estimate a Task?
 
-**Problem:**  
-Estimates are made in isolation, leading to bias and no shared ownership.
+**Goal:** Estimate with enough accuracy to plan, not to promise.
 
-**Why It Happens:**  
-- Fast-moving culture skips planning  
-- Devs fear wasting team time  
-- No habit of peer-checking estimates
+### 🔹 Good Practices
 
-**Suggestions:**  
-✅ Estimate in pairs or with the team  
-✅ Use async planning (e.g. Slack thread, emoji votes)  
-✅ Create a shared “mental model” of task sizes  
-✅ Make it safe to say “I’m unsure — need input”
+- 🧩 Break down before estimating  
+- 🔄 Compare with similar past work  
+- 🤝 Estimate together, not solo  
+- ❓ Call out unknowns or risks  
+- 📊 Use points, hours, or sizes — just be consistent
+
+---
+
+# 🔍 Why Spike Tasks Matter
+
+**Spikes = Time-boxed investigation tasks**  
+Used to explore or reduce uncertainty before estimation.
+
+### 💥 When to Use Them
+
+- Task has too many unknowns to estimate confidently  
+- Need to assess feasibility or options  
+- Risk of under/over-estimation is high
+
+### ✅ Benefits
+
+- De-risk upcoming work  
+- Build shared understanding  
+- Allow better estimation next sprint  
+- Prevent random deep-dives mid-sprint
+
+---
+
+# 🎯 Why Points Can Fail in Small Teams
+
+Story points are often **too abstract** for small teams, especially without consistent velocity data.
+
+### ⚠️ Common Issues
+
+- Not enough historical data to calibrate  
+- Points become guesses, not comparisons  
+- People confuse points with hours  
+- Too few people → team velocity is volatile
+
+### ✅ What to Do Instead
+
+- Use **hours or day-size chunks** if you prefer concreteness  
+- Focus on **task size + clarity**, not exact number  
+- If using points, **build shared examples** (e.g. “This is a 2-pointer”)  
+
+---
+
+# 🔧 How Should We Code It?
+
+**Goal:** Deliver high-quality features with minimal friction.
+
+### 🔹 Good Practices
+
+- 🧼 Start with refactoring — helps understand the code and add safety (tests)
+- 🧠 Align early with a 1-pager design for complex features
+- 🧾 Avoid over-documenting — write self-explanatory code instead
+- ✅ Invest in automated tests — they save hours later
+
+---
+
+# 🌀 How Do We Avoid Mid-Sprint Randomness?
+
+**Goal:** Stay focused on what we committed, while being realistic.
+
+### 🔹 Strategies That Help
+
+- 📦 Keep the sprint backlog tight — only what's well-defined and ready
+- 📣 Communicate — speak up early when something goes off track
+- 🚫 Avoid bundling tech debt into feature work unless planned
+- 🧯 Escalate scope creep early — replan if needed
